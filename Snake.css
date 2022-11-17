@@ -1,0 +1,23 @@
+body {
+    background-color: darkgray;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.scoreBoard {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 30px;
+}
+
+.board {
+    border-style: solid;
+    border-width: 10px;
+    border-color: green;
+    border-radius: 10px;
+}
+
+.resetBtn {
+    height: 50px;
+    font-size: 25px;
+}
