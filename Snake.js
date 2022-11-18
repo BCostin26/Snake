@@ -112,9 +112,3 @@ function restart() {
         window.location.reload();
     }
 }
-
-
-// learn how to utiliza and configure - real time software - related to the management of the ship.
-// simulator - curs
-// training how to create test procedures for unit testing.
-// ""
