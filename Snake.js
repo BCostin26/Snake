@@ -80,17 +80,21 @@ function changeDirection(e) {
     } else if (e.code == "ArrowDown" && velocityY != -1) {
         velocityX = 0;
         velocityY = 1;
-    } else if (e.code == "ArrowLeft" && velocityX != 1) {
-        velocityX = -1;
-        velocityY = 0;
     } else if (e.code == "ArrowRight" && velocityX != -1) {
-        velocityX = 1;
         velocityY = 0;
+        velocityX = 1;
+    } else if (e.code == "ArrowLeft" && velocityX != 1) {
+        velocityY = 0;
+        velocityX = -1;
     }
 }
 
 function placeFood() {
     let foodPlace = false;
+    if (snakeBody.length == rows * cols) {
+        foodPlace == true;
+        winner();
+    }
     while (foodPlace == false) {
         foodPlace = true;
         foodX = Math.floor(Math.random() * cols) * blockSize;
@@ -101,6 +105,11 @@ function placeFood() {
             }
         }
     }
+}
+
+function winner() {
+    alert("Congratulations you finished the game!");
+    restart();
 }
 
 function restart() {
